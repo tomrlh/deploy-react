@@ -1,20 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
-import {
-  Container,
-  Table,
-  Message,
-  Segment,
-  Label,
-  Icon,
-} from "semantic-ui-react";
-import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
+import React from "react";
+import { Container } from "semantic-ui-react";
 import PageHeader from "components/global/Commons/PageHeader";
-import { Link } from "react-router-dom";
-import { LaudoNav } from "routes/navigation/laudo";
-import { ItemOSFieldsNames } from "services/types/ItemOS";
 import { Laudo, LaudoFieldsNames } from "services/types/Laudo";
-import { LaudoContext } from "store/contexts/LaudoContext";
-import RemoveModal from "components/Usuario/Table/Actions/RemoveModal";
 import RemoverModal from "./Actions/RemoverModal";
 import { gerarLaudo, somarGraosAvariados } from "../functions";
 import AtualizarModal from "./Actions/AtualizarModal";
@@ -86,10 +73,4 @@ export default LaudoTable;
 LaudoTable.defaultProps = {
   laudos: [],
   isClassificadorView: true,
-};
-
-const styles = {
-  largerCell: {
-    minWidth: "200px",
-  },
 };

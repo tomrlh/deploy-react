@@ -1,7 +1,4 @@
 import OrdemServicoTable from "pages/Supervisor/OrdemServico";
-import LaudoForm from "components/Laudo/Form";
-import LaudoTable from "components/Laudo/Table";
-import ClassificadorHome from "pages/Classificador/Home";
 import SupervisorHome from "pages/Supervisor/Home";
 import React from "react";
 import { Route, Routes } from "react-router-dom";

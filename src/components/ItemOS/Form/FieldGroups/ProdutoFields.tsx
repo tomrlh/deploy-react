@@ -16,6 +16,7 @@ export default function ProdutoFields(props: Props) {
   const [isSoja, setIsSoja] = useState(false);
 
   useEffect(() => {
+    /*eslint-disable */
     setIsSoja(true);
     props.setValue("produtoNome", "Soja");
     props.register({ name: "produtoNome" }, { required: true });

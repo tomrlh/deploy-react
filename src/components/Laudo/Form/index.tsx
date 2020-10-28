@@ -1,18 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  Header,
-  Image,
-} from "semantic-ui-react";
+import React, { useEffect, useContext } from "react";
+import { Container, Divider, Header, Image } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { Notyf } from "notyf";
 // import MapaEmbarque from "./FieldGroups/MapaEmbarque";
 // import PontoEmbarqueHeader from "../Components/PontoEmbarqueHeader";
-import jsPDF from "jspdf";
 import { post, update } from "services/requests/Laudo";
 import TransporteFields from "./FieldGroups/TransporteFields";
 import QualidadeFields from "./FieldGroups/QualidadeFields";
@@ -26,15 +17,10 @@ const LaudoForm = (props: { laudo: Laudo }) => {
     handleSubmit,
     errors,
     setValue,
-    getValues,
     trigger,
     reset,
   } = useForm();
 
-  const [editando, setEditando] = useState(false);
-  const [wasReset, setWasReset] = useState<boolean>(false);
-  const [isSoja, setIsSoja] = useState(true);
-  const [laudo, setLaudo] = useState<Laudo>({} as Laudo);
   const { laudos, setLaudos } = useContext(LaudoContext);
   const { id } = useParams();
 
@@ -70,6 +56,7 @@ const LaudoForm = (props: { laudo: Laudo }) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     if (props.laudo) {
       Object.values(LaudoFieldsAPI).forEach((campo) => {
         setValue(campo, props.laudo[campo]);

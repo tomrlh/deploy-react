@@ -5,7 +5,6 @@ import {
   defaultHeaders,
 } from "../globals";
 import { ICliente, ClienteFieldsAPI, Cliente } from "services/types/Cliente";
-import { Pagination } from "services/types/Adonis/Pagination";
 
 export const get = async (): Promise<Cliente[]> => {
   console.log("TOKEN BEFORE SUBMIT", localStorage.getItem("token"));

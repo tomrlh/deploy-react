@@ -1,11 +1,8 @@
 import { Cliente, ClienteFieldsAPI } from "services/types/Cliente";
-import { find } from "services/requests/Clientes/Clientes";
 import { find as findResp } from "services/requests/ResponsavelCliente";
 import { ResponsavelCliente } from "services/types/ResponsavelCliente";
-import { ClienteFormMessages, ResponsavelFormMessages } from "./constants";
+import { ResponsavelFormMessages } from "./constants";
 import { notyfSuccess, notyfError } from "utils/notifications";
-import { ClienteNav } from "routes/navigation/cliente";
-import { Notyf } from "notyf";
 
 export const preencheCliente = (
   isEditing: boolean,

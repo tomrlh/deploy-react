@@ -3,7 +3,6 @@ import { Container } from "semantic-ui-react";
 import { Meta, initialMetaState } from "services/types/Adonis/Meta";
 import OrdemServicoTable from "components/OrdemServico/Table";
 import OrdemServicoForm from "components/OrdemServico/Form";
-import { ContratoContext } from "store/contexts/ContratoContext";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
 import { getOSByCliente } from "components/OrdemServico/functions";
 import usePrevious from "services/hooks/usePrevious";
@@ -13,9 +12,7 @@ import { AuthContext } from "store/contexts/AuthContext";
 import { OrdemServico } from "services/types/OrdemServico";
 
 const ClienteOrdemServicoPage = () => {
-  const [firstFetch, setFirstFetch] = useState(false);
   const { loggedUser } = useContext(AuthContext);
-  const { selectedContrato } = useContext(ContratoContext);
   const { ordensServico, setOrdensServico: setOrdensServicoAndLS } = useContext(
     OrdemServicoContext
   );
@@ -34,6 +31,7 @@ const ClienteOrdemServicoPage = () => {
   };
 
   useEffect(
+    /*eslint-disable */
     () => {
       loadOSs();
 

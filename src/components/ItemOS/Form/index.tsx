@@ -1,33 +1,20 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Button, Container, Divider } from "semantic-ui-react";
 import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  List,
-  Segment,
-  Modal,
-} from "semantic-ui-react";
-import {
-  IItemOS,
   ItemOSFieldsAPI,
   ItemOSFieldsNames,
   ItemOS,
 } from "services/types/ItemOS";
 import { PontoEmbarque } from "services/types/PontoEmbarque";
-import { find, post, update } from "services/requests/ItemOS";
+import { post, update } from "services/requests/ItemOS";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { Notyf } from "notyf";
 import DateSelector from "components/global/Inputs/DateSelector";
 import ValidableField from "components/global/Inputs/ValidableField";
 import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
-import ValidableInputMasked from "components/global/Inputs/ValidableInputMasked";
-import OrdemServicoHeader from "./Components/OrdemServicoHeader";
 import * as PontoEmbarqueReq from "services/requests//PontoEmbarque/PontoEmbarque";
 import ProdutoFields from "./FieldGroups/ProdutoFields";
 import PontoEmbarqueForm from "components/PontoEmbarque/Form";
-import { Pagination } from "services/types/Adonis/Pagination";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
 import { showSaveItemOSStatus, preencheItemOS } from "./functions";
 import PageHeader from "components/global/Commons/PageHeader";
@@ -40,28 +27,22 @@ const OrdemServicoForm = () => {
     errors,
     setValue,
     getValues,
-    trigger,
     reset,
   } = useForm();
 
-  const [hovered, setHovered] = useState(false);
   const [editando, setEditando] = useState(false);
   const [wasReset, setWasReset] = useState<boolean>(false);
-  const [openPBModal, setOpenPBModal] = useState<boolean>(false);
+  const [, setOpenPBModal] = useState<boolean>(false);
   const [newPBAdded, setNewPBAdded] = useState<boolean>(false);
   const [pontosEmbarque, setPontosEmbarque] = useState<PontoEmbarque[]>([]);
   const { selectedOrdemServico } = useContext(OrdemServicoContext);
   const { id } = useParams();
 
-  const handleHover = () => {
-    setHovered(!hovered);
-  };
-
   const onSubmit = async (data: { [x: string]: any }) => {
     console.log("AQUI");
     data.ordemServicoId = selectedOrdemServico.id;
     let pontoEmbarqueData = pontosEmbarque.find(
-      (ponto) => ponto.id == data.pontoEmbarqueId
+      (ponto) => ponto.id === data.pontoEmbarqueId
     );
     data.cidadeId = pontoEmbarqueData?.cidadeId;
     console.log(getValues());
@@ -94,6 +75,7 @@ const OrdemServicoForm = () => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     getPontosEmbarque();
     if (newPBAdded) {
       getPontosEmbarque();
@@ -199,9 +181,3 @@ const OrdemServicoForm = () => {
 };
 
 export default OrdemServicoForm;
-
-const styles = {
-  cursorPointer: {
-    cursor: "pointer",
-  },
-};

@@ -1,16 +1,12 @@
-import React, { useContext } from "react";
-import { Container, Dropdown, Icon, Image, Menu } from "semantic-ui-react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
 import { ContratoNav } from "routes/navigation/contrato";
 import { ClienteNav } from "routes/navigation/cliente";
 import { UsuarioNav } from "routes/navigation/usuario";
 import { RegiaoNav } from "routes/navigation/regiao";
-import { AuthContext } from "store/contexts/AuthContext";
 import Navbar from "../index";
 import "NewNavbar.css";
 import RenderDropdown from "../RenderDropdown";
 import RenderItem from "../RenderItem";
-import RenderRightSide from "../RenderRightSide";
 import { PontoEmbarqueNav } from "routes/navigation/ponto-embarque";
 
 const NavbarAdministrativo = () => {
@@ -67,12 +63,3 @@ const NavbarAdministrativo = () => {
 };
 
 export default NavbarAdministrativo;
-
-const classes = {
-  logo: {
-    marginRight: "1.5em",
-  },
-  bar: {
-    backgroundColor: "#45c449",
-  },
-};

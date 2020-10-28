@@ -1,36 +1,16 @@
 import React, { useState, useEffect } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  Header,
-  Icon,
-  Segment,
-} from "semantic-ui-react";
-import { ICliente, ClienteFieldsAPI, Cliente } from "services/types/Cliente";
-import {
-  find,
-  post,
-  update,
-} from "services/requests/PontoEmbarque/PontoEmbarque";
+import { Button, Segment } from "semantic-ui-react";
+import { post, update } from "services/requests/PontoEmbarque/PontoEmbarque";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { Notyf } from "notyf";
 import ValidableField from "components/global/Inputs/ValidableField";
 import {
   PontoEmbarqueFieldsAPI,
   PontoEmbarqueFieldsNames,
   PontoEmbarque,
 } from "services/types/PontoEmbarque";
-import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
 import ValidableTextArea from "components/global/Inputs/ValidableTextArea";
-import {
-  ResponsavelPBFieldsAPI,
-  ResponsavelPBFieldsNames,
-} from "services/types/ResponsavelPB";
 import MapaEmbarque from "./FieldGroups/MapaEmbarque";
-import PontoEmbarqueHeader from "../Components/PontoEmbarqueHeader";
 import { get as getPontosReq } from "services/requests/PontoEmbarque/PontoEmbarque";
 import {
   showDestroyResponsavelStatus,
@@ -60,13 +40,8 @@ const PontoEmbarqueForm = (props: Props) => {
     reset,
   } = useForm();
 
-  const [editando, setEditando] = useState(false);
   const [wasReset, setWasReset] = useState<boolean>(false);
-  const [latitude, setLatitude] = useState(0);
-  const [pontosEmbarqueFormatted, setPontosEmbarqueFormatted] = useState<
-    Opcoes[]
-  >([]);
-  const [longitude, setLongitude] = useState(0);
+  const [, setPontosEmbarqueFormatted] = useState<Opcoes[]>([]);
   const { id } = useParams();
 
   const onSubmit = async (data: { [x: string]: any }) => {

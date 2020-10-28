@@ -3,9 +3,8 @@ import { useForm } from "react-hook-form";
 import { getClassificadores } from "services/requests/Usuarios/Usuarios";
 import { update } from "services/requests/ItemOS";
 import { Usuario } from "services/types/Usuario";
-import { OrdemServico, IOrdemServico } from "services/types/OrdemServico";
 import { Form, Icon } from "semantic-ui-react";
-import { notyfError, notyfSuccess, notyfWarn } from "utils/notifications";
+import { notyfSuccess, notyfWarn } from "utils/notifications";
 import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
 import { ItemOS } from "services/types/ItemOS";
@@ -18,14 +17,7 @@ type Opcoes = {
 };
 
 export default function ClassificadorForm(props: { selectedItemOS: ItemOS }) {
-  const {
-    register,
-    handleSubmit,
-    errors,
-    getValues,
-    setValue,
-    reset,
-  } = useForm();
+  const { register, handleSubmit, errors, setValue } = useForm();
 
   const {
     selectedOrdemServico,
@@ -39,7 +31,7 @@ export default function ClassificadorForm(props: { selectedItemOS: ItemOS }) {
   );
 
   const loadClassificadores = async () => {
-    if (!loadedClassificadores || loadedClassificadores.length == 0) {
+    if (!loadedClassificadores || loadedClassificadores.length === 0) {
       let newClassificadores = await getClassificadores();
       setLoadedClassificadores(newClassificadores);
     }
@@ -70,6 +62,7 @@ export default function ClassificadorForm(props: { selectedItemOS: ItemOS }) {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     loadClassificadores();
     console.log(selectedOrdemServico.supervisores, props.selectedItemOS.id);
   }, []);

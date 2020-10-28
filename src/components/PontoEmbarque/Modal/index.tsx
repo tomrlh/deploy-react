@@ -1,8 +1,5 @@
 import CustomPopup from "components/global/CustomPopup";
 import React from "react";
-import { Icon, Modal } from "semantic-ui-react";
-import { Cliente } from "services/types/Cliente";
-import PontoEmbarqueForm from "../Form";
 
 export default function PontoEmbarqueModal(props: { form: React.ReactNode }) {
   const modalId = "novoPontoEmbarqueModal";

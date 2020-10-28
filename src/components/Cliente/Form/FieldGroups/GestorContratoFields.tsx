@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Form, Header } from "semantic-ui-react";
+import { Icon, Header } from "semantic-ui-react";
 import { ClienteFieldsNames, ClienteFieldsAPI } from "services/types/Cliente";
 import { HookFormValidator } from "services/types/Validators/FormValidator";
 import ValidableField from "components/global/Inputs/ValidableField";

@@ -1,13 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import {
-  Container,
-  Table,
-  Message,
-  Segment,
-  Label,
-  Icon,
-} from "semantic-ui-react";
-import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
+import React, { useContext } from "react";
 import PageHeader from "components/global/Commons/PageHeader";
 import { Link } from "react-router-dom";
 import { LaudoNav } from "routes/navigation/laudo";

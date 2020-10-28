@@ -1,5 +1,4 @@
 import React from "react";
-import { Button, Icon, Modal } from "semantic-ui-react";
 import { Cliente } from "services/types/Cliente";
 import GestoresClienteTable from "components/Contrato/Table/DetalhesModal/GestoresClienteTable";
 import DadosEmpresaTabela from "./DadosEmpresaTable";

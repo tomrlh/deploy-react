@@ -1,6 +1,4 @@
-import CustomPopup from "components/global/CustomPopup";
-import React, { useEffect } from "react";
-import { Icon, Modal } from "semantic-ui-react";
+import React from "react";
 import { Laudo } from "services/types/Laudo";
 import LaudoForm from "../../../Form";
 
@@ -10,7 +8,7 @@ export default function AtualizarModal(props: { laudo: Laudo }) {
   return (
     <>
       <a
-        href="#"
+        href="/#"
         data-toggle="tooltip"
         title="Editar"
         data-placement="top"

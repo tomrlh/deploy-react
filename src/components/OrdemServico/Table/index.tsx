@@ -1,14 +1,4 @@
-import React, { useContext, useState } from "react";
-import {
-  Container,
-  Header,
-  Icon,
-  Message,
-  Table,
-  Label,
-  Modal,
-  Segment,
-} from "semantic-ui-react";
+import React, { useContext } from "react";
 import {
   OrdemServico,
   OrdemServicoFieldsNames,
@@ -19,10 +9,8 @@ import { CommonNav } from "routes/navigation/comum";
 import { ItemOSNav } from "routes/navigation/itemos";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
 import StatusLabel from "components/global/Commons/StatusLabel";
-import SupervisorLabel from "components/global/Commons/SupervisorLabel";
 import CustomPopup from "components/global/CustomPopup";
 import SupervisorModal from "./Actions/SupervisorModal";
-import { ContratoContext } from "store/contexts/ContratoContext";
 import { ItemOSContext } from "store/contexts/ItemOSContext";
 import * as ItemOSReq from "services/requests/ItemOS";
 import PageHeader from "components/global/Commons/PageHeader";
@@ -37,7 +25,7 @@ type Props = {
 };
 
 const OrdemServicoTable = (props: Props) => {
-  const [showSupervisorSelect, setShowSupervisorSelect] = useState(false);
+  // const [showSupervisorSelect, setShowSupervisorSelect] = useState(false);
 
   // const { selectedContrato } = useContext(ContratoContext);
   const { setSelectedOrdemServico } = useContext(OrdemServicoContext);
@@ -59,9 +47,9 @@ const OrdemServicoTable = (props: Props) => {
     navigate(`${CommonNav.HOME}${CommonNav.CLIENTE}/${ItemOSNav.CADASTRAR}`);
   };
 
-  const defineSupervisor = (os: OrdemServico) => {
-    setShowSupervisorSelect(true);
-  };
+  // const defineSupervisor = (os: OrdemServico) => {
+  //   setShowSupervisorSelect(true);
+  // };
 
   return (
     <div>

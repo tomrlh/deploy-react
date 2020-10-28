@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Button, Icon, Form, Header } from "semantic-ui-react";
+import { Icon, Header } from "semantic-ui-react";
 import {
   ResponsavelClienteFieldsNames,
   ResponsavelClienteFieldsAPI,
@@ -52,6 +52,7 @@ const ResponsavelForm = (props: Props) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     const preencheForm = async () => {
       if (props.isEditing && props.responsavel) {
         Object.values(ResponsavelClienteFieldsAPI).forEach((campo) => {

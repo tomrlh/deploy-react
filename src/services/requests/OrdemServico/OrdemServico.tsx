@@ -4,7 +4,6 @@ import {
   formatAxiosResponse,
 } from "../globals";
 import { OrdemServico, IOrdemServico } from "services/types/OrdemServico";
-import { Pagination } from "services/types/Adonis/Pagination";
 
 export const get = async (): Promise<OrdemServico[]> => {
   let res: OrdemServico[] = await axios

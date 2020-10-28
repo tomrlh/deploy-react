@@ -1,13 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Icon, Message } from "semantic-ui-react";
-import { Cidade, Regiao } from "services/types/Regiao";
-import { Meta } from "services/types/Adonis/Meta";
 import PageHeader from "components/global/Commons/PageHeader";
 import * as ItemOSReq from "services/requests/ItemOS";
-import { divide } from "lodash";
-import RegioesForm from "../Form";
-import { RegiaoContext } from "store/contexts/RegiaoContext";
-import { Usuario } from "services/types/Usuario";
 import { ItemOS } from "services/types/ItemOS";
 import { notyfSuccess } from "utils/notifications";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
@@ -17,16 +11,13 @@ type Props = {
 };
 
 const ClassificadoresList = (props: Props) => {
-  const {
-    selectedOrdemServico,
-    setSelectedOrdemServico,
-    loadedClassificadores,
-    setLoadedClassificadores,
-  } = useContext(OrdemServicoContext);
-
-  const [localClassificadores, setLocalClassificadores] = useState<Usuario[]>(
-    []
+  const { selectedOrdemServico, setSelectedOrdemServico } = useContext(
+    OrdemServicoContext
   );
+
+  // const [localClassificadores, setLocalClassificadores] = useState<Usuario[]>(
+  //   []
+  // );
   const [isHovering, setIsHovering] = useState(false);
 
   const handleHover = () => {
@@ -62,7 +53,7 @@ const ClassificadoresList = (props: Props) => {
   };
 
   useEffect(() => {
-    setLocalClassificadores(props.selectedItemOS.classificadores);
+    // setLocalClassificadores(props.selectedItemOS.classificadores);
   }, [props, props.selectedItemOS.classificadores]);
 
   return (

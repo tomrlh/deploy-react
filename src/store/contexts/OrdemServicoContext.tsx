@@ -1,5 +1,4 @@
 import React, { useState, useEffect, createContext } from "react";
-import { ItemOS } from "services/types/ItemOS";
 import { OrdemServico } from "services/types/OrdemServico";
 import { Usuario } from "services/types/Usuario";
 import { getArrayFromLocalStorage } from "utils";

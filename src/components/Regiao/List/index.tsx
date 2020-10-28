@@ -1,17 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Icon, Message } from "semantic-ui-react";
 import { Cidade, Regiao } from "services/types/Regiao";
-import { Meta } from "services/types/Adonis/Meta";
 import PageHeader from "components/global/Commons/PageHeader";
 import AdicionarModal from "./Actions/AdicionarModal";
-import * as Regioes from "services/requests/Regioes";
-import { divide } from "lodash";
 import RegioesForm from "../Form";
 import { RegiaoContext } from "store/contexts/RegiaoContext";
 
 type Props = {
   regioes: Regiao[];
-  paginationControls: Meta;
 };
 
 const RegioesTable = (props: Props) => {
@@ -23,7 +19,6 @@ const RegioesTable = (props: Props) => {
   };
 
   const deleteCidadeFromRegiao = async (regiaoId: number, cidadeId: number) => {
-    let response = await Regioes.destroyCity(regiaoId, cidadeId);
     let regiaoToUpdate = regioes.find(
       (regiao) => regiao.id === regiaoId
     ) as Regiao;
@@ -42,11 +37,11 @@ const RegioesTable = (props: Props) => {
   };
 
   const deleteRegiao = async (id: number) => {
-    let response = await Regioes.destroy(id);
     setRegioes(regioes.filter((regiao) => regiao.id !== id));
   };
 
   useEffect(() => {
+    /*eslint-disable */
     setRegioes(props.regioes);
   }, [props, props.regioes]);
 

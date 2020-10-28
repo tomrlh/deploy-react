@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   GoogleMap,
   LoadScript,
@@ -27,7 +27,7 @@ const mountPosition = (props: Props) => {
 };
 
 const PontosMapa = (props: Props) => {
-  const [mapCenter, setMapCenter] = useState(mountPosition(props));
+  const mapCenter = mountPosition(props);
 
   const onLoad = (marker: any) => {
     console.log("marker: ", marker);

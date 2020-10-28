@@ -1,16 +1,12 @@
 import React, { useContext } from "react";
-import { Button, Divider, Icon, List, Modal } from "semantic-ui-react";
-import { Usuario } from "services/types/Usuario";
 import * as LaudoReq from "services/requests/Laudo";
-import { remove } from "lodash";
-import CustomPopup from "components/global/CustomPopup";
 import { notyfSuccess } from "utils/notifications";
 import { Laudo } from "services/types/Laudo";
 import { LaudoContext } from "store/contexts/LaudoContext";
 
 const RemoverModal = (props: { laudo: Laudo }) => {
   const modalId = "laudoRemoveModal";
-  const { laudos, setLaudos, removeLaudo } = useContext(LaudoContext);
+  const { laudos, setLaudos } = useContext(LaudoContext);
 
   const removerLaudo = async (id: string) => {
     const response = await LaudoReq.destroy(id);
@@ -26,7 +22,7 @@ const RemoverModal = (props: { laudo: Laudo }) => {
   return (
     <>
       <a
-        href="#"
+        href="/#"
         data-toggle="tooltip"
         title="Remover"
         data-placement="top"
@@ -87,16 +83,3 @@ const RemoverModal = (props: { laudo: Laudo }) => {
 };
 
 export default RemoverModal;
-
-const styles = {
-  actions: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "flex-end" as const,
-  },
-  blackButtonColor: {
-    color: "#555",
-    boxShadow: "none",
-    textShadow: "none",
-  },
-};

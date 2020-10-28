@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Image } from "semantic-ui-react";
 
 export const Footer = () => (
   <footer className="page-footer font-small teal" style={styles.fixPadding}>
@@ -10,7 +9,7 @@ export const Footer = () => (
           className="img-fluid ui tiny image"
           alt="logo"
         />
-        <a href="">
+        <a href="/#">
           <div className="mask rgba-white-light"></div>
         </a>
       </div>

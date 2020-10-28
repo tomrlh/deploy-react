@@ -1,12 +1,4 @@
 import React, { useState, useContext } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  Header,
-  Icon,
-} from "semantic-ui-react";
 import { post, update } from "services/requests/OrdemServico/OrdemServico";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";

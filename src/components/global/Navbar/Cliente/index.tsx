@@ -1,9 +1,5 @@
-import React, { useContext } from "react";
-import { Image, Menu } from "semantic-ui-react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { ContratoNav } from "routes/navigation/contrato";
-import { OrdemServicoNav } from "routes/navigation/ordemservico";
-import { AuthContext } from "store/contexts/AuthContext";
 import Navbar from "../index";
 import "NewNavbar.css";
 import RenderItem from "../RenderItem";
@@ -31,12 +27,3 @@ const NavbarCliente = () => {
 };
 
 export default NavbarCliente;
-
-const classes = {
-  logo: {
-    marginRight: "1.5em",
-  },
-  bar: {
-    backgroundColor: "#45c449",
-  },
-};

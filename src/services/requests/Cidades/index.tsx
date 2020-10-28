@@ -1,8 +1,4 @@
-import {
-  axiosInstance as axios,
-  CustomResponseType,
-  formatAxiosResponse,
-} from "../globals";
+import { axiosInstance as axios, formatAxiosResponse } from "../globals";
 
 type Cidade = {
   id: string;

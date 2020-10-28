@@ -3,9 +3,7 @@ import {
   CustomResponseType,
   formatAxiosResponse,
 } from "../globals";
-import { Usuario, IUsuario } from "services/types/Usuario";
-import { Pagination } from "services/types/Adonis/Pagination";
-import { Role } from "services/types/Role";
+import { Usuario } from "services/types/Usuario";
 
 export const get = async (): Promise<Usuario[]> => {
   let res: Usuario[] = await axios

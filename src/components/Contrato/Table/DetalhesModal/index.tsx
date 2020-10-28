@@ -1,10 +1,8 @@
 import React from "react";
-import { Button, Header, Icon, List, Modal } from "semantic-ui-react";
 import { ContratoFromAPI } from "services/types/Contrato";
 import GestoresClienteTable from "./GestoresClienteTable";
 import ContratoDetails from "./ContratoDetails";
 import CustomPopup from "components/global/CustomPopup";
-import { download } from "services/requests/Contratos/Contratos";
 import { BASE_URL } from "utils/constants";
 
 const DetalhesModal = (props: { contrato: ContratoFromAPI }) => {
@@ -42,6 +40,7 @@ const DetalhesModal = (props: { contrato: ContratoFromAPI }) => {
                   <a
                     href={`${BASE_URL}download/${props.contrato.contratoKey}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     style={{ fontSize: "14px" }}
                   >
                     Baixar contrato

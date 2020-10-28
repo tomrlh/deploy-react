@@ -1,5 +1,4 @@
 import React from "react";
-import { Label } from "semantic-ui-react";
 import Badge from "./Badge";
 
 const StatusLabel = (props: { text: string }) => {

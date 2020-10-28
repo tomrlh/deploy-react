@@ -1,5 +1,3 @@
-import { clear } from "console";
-
 export enum ProfilesPrefix {
   DIRETOR = "diretor",
   ADMINISTRADOR = "administrador",

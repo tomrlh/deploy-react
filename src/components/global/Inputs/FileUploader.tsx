@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Dropzone, { useDropzone } from "react-dropzone";
+import Dropzone from "react-dropzone";
 import { DeepMap } from "react-hook-form/dist/types/utils";
 import { FieldError } from "react-hook-form";
 
@@ -30,6 +30,7 @@ const FileUploader = (props: Props) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     props.register({ name: props.nomeCampo }, { required: props.required });
     //    if (props.wasReset) setCurrentValue(null);
     //}, [props.wasReset]);

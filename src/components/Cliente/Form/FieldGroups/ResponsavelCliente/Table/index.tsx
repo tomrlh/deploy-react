@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Header, Icon, Message, Table, Button } from "semantic-ui-react";
+import { Header, Icon, Button } from "semantic-ui-react";
 import { destroy } from "services/requests/ResponsavelCliente";
 import {
   showDestroyResponsavelStatus,

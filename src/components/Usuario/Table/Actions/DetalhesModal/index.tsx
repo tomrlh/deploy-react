@@ -1,6 +1,4 @@
-import CustomPopup from "components/global/CustomPopup";
-import React, { Component } from "react";
-import { Divider, Icon, List, Modal } from "semantic-ui-react";
+import React from "react";
 import { Usuario, UsuarioFieldsNames } from "services/types/Usuario";
 
 type Props = {
@@ -48,7 +46,7 @@ const DetalhesModal = (props: Props) => {
   return (
     <>
       <a
-        href="#"
+        href="/#"
         data-toggle="tooltip"
         title="Detalhes"
         data-placement="top"

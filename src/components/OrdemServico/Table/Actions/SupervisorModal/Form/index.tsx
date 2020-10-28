@@ -20,14 +20,7 @@ export interface Props {
 }
 
 export default function SupervisorForm() {
-  const {
-    register,
-    handleSubmit,
-    errors,
-    getValues,
-    setValue,
-    reset,
-  } = useForm();
+  const { register, handleSubmit, errors, setValue } = useForm();
 
   const { selectedOrdemServico, setSelectedOrdemServico } = useContext(
     OrdemServicoContext
@@ -42,16 +35,16 @@ export default function SupervisorForm() {
     setLoadedSupervisores(newSupervisores);
   };
 
-  const filterSupervisores = () => {
-    let filteredSupervisores: Usuario[] = [];
-    selectedOrdemServico.supervisores.forEach((supervisor) => {
-      let result = selectedOrdemServico.supervisores.filter(
-        (osSupervisor) => osSupervisor.id === supervisor.id
-      );
-      if (result.length == 0) filteredSupervisores.push(supervisor);
-    });
-    return filteredSupervisores;
-  };
+  // const filterSupervisores = () => {
+  //   let filteredSupervisores: Usuario[] = [];
+  //   selectedOrdemServico.supervisores.forEach((supervisor) => {
+  //     let result = selectedOrdemServico.supervisores.filter(
+  //       (osSupervisor) => osSupervisor.id === supervisor.id
+  //     );
+  //     if (result.length == 0) filteredSupervisores.push(supervisor);
+  //   });
+  //   return filteredSupervisores;
+  // };
 
   const onSubmit = async (data: { [x: string]: any }) => {
     let updated = await update(selectedOrdemServico.id.toString(), {
@@ -79,6 +72,7 @@ export default function SupervisorForm() {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     loadSupervisores();
     console.log(selectedOrdemServico.supervisores);
   }, []);

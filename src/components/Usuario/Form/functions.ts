@@ -19,10 +19,6 @@ export const showUsuarioStatus = (
   redirection: Function
 ) => {
   if (response && response.status === "OK") {
-    let message = !id
-      ? UsuarioFormMessages.SUCCESS
-      : UsuarioFormMessages.UPDATE;
-
     if (!id) {
       redirection(
         UsuarioFormMessages.SUCCESS + ".\nClique aqui para ir para usuários"

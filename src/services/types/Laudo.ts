@@ -1,5 +1,3 @@
-import { Cliente } from "./Cliente";
-
 export type Laudo = {
   id: number;
   itemOSId: number;

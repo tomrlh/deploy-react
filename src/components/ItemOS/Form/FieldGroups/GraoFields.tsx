@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Image, Form } from "semantic-ui-react";
+import { Header, Image } from "semantic-ui-react";
 import { ItemOSFieldsAPI, ItemOSFieldsNames } from "services/types/ItemOS";
 import { DeepMap } from "react-hook-form/dist/types/utils";
 import { FieldError } from "react-hook-form";
@@ -22,6 +22,7 @@ export default function GraoFields(props: {
   const [isOutraTolerancia, setIsOutraTolerancia] = useState(false);
 
   useEffect(() => {
+    /*eslint-disable */
     props.register({ name: "produtoTeste" }, { required: true });
     props.register({ name: "produtoTolerancia" }, { required: true });
   }, []);

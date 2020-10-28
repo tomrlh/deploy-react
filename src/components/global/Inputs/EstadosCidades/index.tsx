@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
 import { get } from "services/requests/Estados";
 import { getByEstado } from "services/requests/Cidades";
 import { DeepMap } from "react-hook-form/dist/types/utils";

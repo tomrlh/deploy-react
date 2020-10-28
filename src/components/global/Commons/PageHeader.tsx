@@ -1,5 +1,4 @@
 import React from "react";
-import { Header, Image } from "semantic-ui-react";
 
 export default function PageHeader(props: {
   title: string;
@@ -12,6 +11,7 @@ export default function PageHeader(props: {
         className={props.withRadius ? "rounded" : "rounded-no-radius"}
         src={props.iconPath}
         style={{ marginRight: "5px" }}
+        alt={props.title}
       />
       {props.title}
     </legend>

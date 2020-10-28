@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Icon, Label, Message, Segment, Table } from "semantic-ui-react";
+import { Label } from "semantic-ui-react";
 import { ContratoFieldsNames, ContratoFromAPI } from "services/types/Contrato";
-import { Meta } from "services/types/Adonis/Meta";
 import DetalhesModal from "./DetalhesModal";
-import ContratoHeader from "../Components/ContratoHeader";
 import { ContratoContext } from "store/contexts/ContratoContext";
 import CustomPopup from "components/global/CustomPopup";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
@@ -14,7 +12,6 @@ import { getOSByContrato } from "components/OrdemServico/functions";
 
 type Props = {
   contratos: Array<ContratoFromAPI>;
-  paginationControls: Meta;
   canSetSupervisor: boolean;
   ordemServicoLink: string;
 };
@@ -29,7 +26,6 @@ const ContratosTable = (props: Props) => {
     let selectedOrdensServico = await getOSByContrato(contrato);
     console.log("selectedOrdensServico", selectedOrdensServico);
     setOrdensServico(selectedOrdensServico);
-    let link = props.ordemServicoLink;
     // `${CommonNav.HOME}${CommonNav.ADMIN}/${OrdemServicoNav.CONSULTAR}`
     // OLD navigate(`../../../${OrdemServicoNav.CONSULTAR}`);
     navigate(`../../${OrdemServicoNav.CONSULTAR}`);

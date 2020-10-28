@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container, Form } from "semantic-ui-react";
 import {
   IContrato,
   ContratoFieldsAPI,
@@ -13,10 +12,8 @@ import ValidableField from "components/global/Inputs/ValidableField";
 import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
 import { Cliente } from "services/types/Cliente";
 import * as Clientes from "services/requests/Clientes/Clientes";
-import { Pagination } from "services/types/Adonis/Pagination";
 import CurrencyInput from "components/global/Inputs/CurrencyInput";
 import FileUploader from "components/global/Inputs/FileUploader";
-import ContratoHeader from "../Components/ContratoHeader";
 import { showSaveContratoStatus } from "./functions";
 import PageHeader from "components/global/Commons/PageHeader";
 
@@ -58,6 +55,7 @@ const ContratoForm = (props: Props) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     const preencheCliente = async (data: { [x: string]: any }) => {
       if (data) {
         Object.values(ContratoFieldsAPI).forEach((campo) => {

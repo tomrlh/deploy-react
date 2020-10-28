@@ -1,4 +1,3 @@
-import ItemOSTable from "components/ItemOS/Table";
 import LaudoForm from "components/Laudo/Form";
 import ClassificadorHome from "pages/Classificador/Home";
 import LaudosPage from "pages/Classificador/Laudo";
@@ -8,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import { CommonNav } from "routes/navigation/comum";
 import { ItemOSNav } from "routes/navigation/itemos";
 import { LaudoNav } from "routes/navigation/laudo";
-import LaudoTable from "components/Laudo/Table";
 
 export default function ClassificadorRoutes() {
   return (

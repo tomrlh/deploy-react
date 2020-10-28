@@ -1,8 +1,4 @@
-import ValidableSelectField from "components/global/Inputs/ValidableSelectField";
 import React, { useState } from "react";
-import { FieldError } from "react-hook-form";
-import { DeepMap } from "react-hook-form/dist/types/utils";
-import { Form } from "semantic-ui-react";
 import { ItemOS } from "services/types/ItemOS";
 import { update } from "services/requests/ItemOS";
 import { notyfSuccess } from "utils/notifications";

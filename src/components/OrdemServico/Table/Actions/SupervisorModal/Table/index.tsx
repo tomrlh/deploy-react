@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Button, Header, Icon, List, Message } from "semantic-ui-react";
 import { OrdemServico } from "services/types/OrdemServico";
 import { updateRemoveSupervisor } from "services/requests/OrdemServico/OrdemServico";

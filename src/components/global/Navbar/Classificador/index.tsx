@@ -21,12 +21,3 @@ const NavbarClassificador = () => {
 };
 
 export default NavbarClassificador;
-
-const classes = {
-  logo: {
-    marginRight: "1.5em",
-  },
-  bar: {
-    backgroundColor: "#45c449",
-  },
-};

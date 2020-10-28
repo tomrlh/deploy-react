@@ -3,7 +3,6 @@ import {
   GoogleMap,
   LoadScript,
   Marker,
-  InfoWindow,
   Autocomplete,
 } from "@react-google-maps/api";
 
@@ -68,6 +67,7 @@ const MapaEmbarque = (props: Props) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     console.log("useEffect", props.latitude, props.longitude);
     updateParentCoordinate({ lat: props.latitude, lng: props.longitude });
   }, [props.latitude, props.longitude]);

@@ -1,9 +1,6 @@
 import React from "react";
-import { Button, Divider, Icon, List, Modal } from "semantic-ui-react";
 import { Usuario } from "services/types/Usuario";
 import * as UsuarioReq from "services/requests/Usuarios/Usuarios";
-import { remove } from "lodash";
-import CustomPopup from "components/global/CustomPopup";
 import { notyfSuccess } from "utils/notifications";
 
 const RemoveModal = (props: {
@@ -23,7 +20,7 @@ const RemoveModal = (props: {
   return (
     <>
       <a
-        href="#"
+        href="/#"
         data-toggle="tooltip"
         title="Remover"
         data-placement="top"
@@ -84,16 +81,3 @@ const RemoveModal = (props: {
 };
 
 export default RemoveModal;
-
-const styles = {
-  actions: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "flex-end" as const,
-  },
-  closeIcon: {
-    minHeight: "14px",
-    marginTop: "3px !important",
-    marginBottom: "-53px !important",
-  },
-};

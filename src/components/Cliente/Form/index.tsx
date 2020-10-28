@@ -1,12 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  Segment,
-  Image,
-} from "semantic-ui-react";
+import { Segment } from "semantic-ui-react";
 import {
   Cliente,
   ClienteFieldsAPI,
@@ -91,6 +84,7 @@ const ClienteForm = (props: Props) => {
     };
 
     if (props.isEditing) {
+      /*eslint-disable */
       chamaPreencherCliente();
     } else {
       setResponsaveisCliente([]);

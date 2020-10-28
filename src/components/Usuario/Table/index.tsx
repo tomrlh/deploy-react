@@ -1,13 +1,4 @@
 import React from "react";
-import {
-  Button,
-  Icon,
-  Image,
-  Message,
-  Segment,
-  Table,
-} from "semantic-ui-react";
-import CustomHeader from "components/global/Commons/PageHeader";
 import { Usuario, UsuarioFieldsNames } from "services/types/Usuario";
 import { Role } from "services/types/Role";
 import { Link } from "react-router-dom";
@@ -128,17 +119,3 @@ const UsuariosTable = (props: Props) => {
 };
 
 export default UsuariosTable;
-
-const styles = {
-  logoContainer: { display: "table" },
-  logo: {
-    borderRadius: "5px",
-    marginRight: "5px",
-    width: "30",
-    height: "30",
-  },
-  logoText: {
-    display: "table-cell",
-    verticalAlign: "middle",
-  },
-};

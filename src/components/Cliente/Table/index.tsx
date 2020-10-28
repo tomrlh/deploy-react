@@ -1,8 +1,5 @@
 import React from "react";
-import { Image, Message, Segment, Table } from "semantic-ui-react";
 import { Cliente } from "services/types/Cliente";
-import { Meta } from "services/types/Adonis/Meta";
-import RodapeTabela from "./Rodape";
 import DetalhesModal from "./Actions/DetalhesModal";
 import PageHeader from "components/global/Commons/PageHeader";
 import AtualizarModal from "./Actions/AtualizarModal";
@@ -10,7 +7,6 @@ import { ClienteFieldsNames } from "services/types/Cliente";
 
 type Props = {
   clientes: Array<Cliente>;
-  paginationControls: Meta;
 };
 
 const ClientesTable = (props: Props) => {
@@ -35,7 +31,7 @@ const ClientesTable = (props: Props) => {
             <tbody>
               {props.clientes.map((cliente, idx) => (
                 <tr key={`${cliente.id}-${idx}`}>
-                  <td scope="row">
+                  <td>
                     <p style={styles.logoText}>{cliente.razaoSocial}</p>
                   </td>
                   <td>{cliente.cnpj}</td>

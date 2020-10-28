@@ -1,7 +1,6 @@
 import EstadosCidades from "components/global/Inputs/EstadosCidades";
 import React, { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
-import { Button, Icon, Modal } from "semantic-ui-react";
+import { Icon, Modal } from "semantic-ui-react";
 import { Regiao } from "services/types/Regiao";
 import * as Regioes from "services/requests/Regioes";
 import { RegiaoContext } from "store/contexts/RegiaoContext";
@@ -11,7 +10,6 @@ import { notyfWarn } from "utils/notifications";
 
 const AdicionarModal = (props: { regiao: Regiao }) => {
   const { regioes, setRegioes } = useContext(RegiaoContext);
-  const [wasReset, setWasReset] = useState<boolean>(false);
   const [open, setOpen] = React.useState(false);
   const [cidadesToAdd, setCidadesToAdd] = useState([]);
 

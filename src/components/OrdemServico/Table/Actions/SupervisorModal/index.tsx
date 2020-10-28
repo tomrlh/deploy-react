@@ -1,6 +1,5 @@
 import CustomPopup from "components/global/CustomPopup";
 import React, { useContext, useEffect } from "react";
-import { Icon, Modal } from "semantic-ui-react";
 import { OrdemServico } from "services/types/OrdemServico";
 import { OrdemServicoContext } from "store/contexts/OrdemServicoContext";
 import SupervisorForm from "./Form";
@@ -8,11 +7,10 @@ import SupervisoresTable from "./Table";
 
 export default function SupervisorModal(props: { os: OrdemServico }) {
   const modalId = "supevisorModal";
-  const { selectedOrdemServico, setSelectedOrdemServico } = useContext(
-    OrdemServicoContext
-  );
+  const { setSelectedOrdemServico } = useContext(OrdemServicoContext);
 
   useEffect(() => {
+    /*eslint-disable */
     setSelectedOrdemServico([]);
     setSelectedOrdemServico([]);
     setSelectedOrdemServico(props.os);

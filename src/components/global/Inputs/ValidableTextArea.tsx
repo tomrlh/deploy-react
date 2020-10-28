@@ -2,7 +2,6 @@ import React from "react";
 import { TextArea } from "semantic-ui-react";
 import { FieldError } from "react-hook-form";
 import { DeepMap } from "react-hook-form/dist/types/utils";
-import { property } from "lodash";
 
 export default function ValidableTextArea(props: {
   nomeCampo: string;

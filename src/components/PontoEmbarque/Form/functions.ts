@@ -1,6 +1,5 @@
 import { PontoEmbarqueFormMessages } from "./constants";
 import { notyfSuccess, notyfError } from "utils/notifications";
-import { ContratoFromAPI } from "services/types/Contrato";
 
 export const showSavePontoEmbarqueStatus = (
   response: any

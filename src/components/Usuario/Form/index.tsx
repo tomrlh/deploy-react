@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Icon, Input } from "semantic-ui-react";
 import {
-  Button,
-  Container,
-  Divider,
-  Form,
-  Icon,
-  Input,
-  Segment,
-} from "semantic-ui-react";
-import {
-  IUsuario,
   Usuario,
   UsuarioFieldsAPI,
   UsuarioFieldsNames,
@@ -31,7 +22,6 @@ import ValidableSelectField from "components/global/Inputs/ValidableSelectField"
 import EstadosCidades from "components/global/Inputs/EstadosCidades";
 import PageHeader from "components/global/Commons/PageHeader";
 import { Perfil } from "services/types/Perfil";
-import Estados from "components/global/Inputs/EstadosCidades/Estados";
 import { RegiaoContext } from "store/contexts/RegiaoContext";
 import { Regiao } from "services/types/Regiao";
 import * as RegioesReq from "services/requests/Regioes";
@@ -47,7 +37,7 @@ const UsuarioForm = () => {
   const [estados, setEstados] = useState<Estado[]>([]);
   const navigate = useNavigate();
   const [editando, setEditando] = useState(false);
-  const [usuario, setUsuario] = useState<Usuario>({} as Usuario);
+  const [, setUsuario] = useState<Usuario>({} as Usuario);
   const [perfilSelecionado, setPerfilSelecionado] = useState<Perfil>(
     {} as Perfil
   );
@@ -55,7 +45,7 @@ const UsuarioForm = () => {
   const [wasReset, setWasReset] = useState<boolean>(false);
 
   const [cidadesSelecionadas, setCidadesSelecionadas] = useState([]);
-  const [estadoSelecionado, setEstadoSelecionado] = useState("");
+  const [estadoSelecionado] = useState("");
 
   const { register, handleSubmit, errors, setValue, reset } = useForm();
   const { id } = useParams();
@@ -113,6 +103,7 @@ const UsuarioForm = () => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     const chamaPreencherUsuario = async () => {
       let usuarioCarregado = await functions.preencheUsuario(id, setValue);
       if (usuarioCarregado) {

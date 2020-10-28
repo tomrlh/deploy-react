@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NumberFormat from "react-number-format";
 import { DeepMap } from "react-hook-form/dist/types/utils";
-import { FieldError, Controller } from "react-hook-form";
+import { FieldError } from "react-hook-form";
 
 type Props = {
   nomeCampo: string;
@@ -33,6 +33,7 @@ const CurrencyInput = (props: Props) => {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     props.register({ name: props.nomeCampo }, { required: props.required });
     if (props.wasReset) setCurrentValue("");
   }, [props.wasReset]);

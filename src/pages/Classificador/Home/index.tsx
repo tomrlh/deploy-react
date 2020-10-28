@@ -1,7 +1,5 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
 import { Outlet } from "react-router-dom";
-import NavbarCliente from "components/global/Navbar/";
 import ContratoProvider from "store/contexts/ContratoContext";
 import OrdemServicoProvider from "store/contexts/OrdemServicoContext";
 import RegiaoProvider from "store/contexts/RegiaoContext";

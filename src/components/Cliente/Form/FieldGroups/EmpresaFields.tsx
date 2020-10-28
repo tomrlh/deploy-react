@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
-import { Button, Divider, Icon, Form, Header } from "semantic-ui-react";
+import React from "react";
 import { ClienteFieldsNames, ClienteFieldsAPI } from "services/types/Cliente";
-import { onChange } from "services/validators/form-validators";
 import { HookFormValidator } from "services/types/Validators/FormValidator";
-import InputMask from "react-input-mask";
 import ValidableInputMasked from "components/global/Inputs/ValidableInputMasked";
 import ValidableField from "components/global/Inputs/ValidableField";
 

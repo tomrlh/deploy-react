@@ -1,6 +1,5 @@
 import CustomPopup from "components/global/CustomPopup";
-import React, { useContext, useEffect } from "react";
-import { Icon, Modal } from "semantic-ui-react";
+import React from "react";
 import { ItemOS } from "services/types/ItemOS";
 import StatusItemForm from "./Form";
 

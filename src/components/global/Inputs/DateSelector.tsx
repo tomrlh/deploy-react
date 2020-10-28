@@ -35,6 +35,7 @@ function DateSelector(props: Props) {
   };
 
   useEffect(() => {
+    /*eslint-disable */
     props.register({ name: props.nomeCampo }, { required: true });
     if (props.wasReset) setCurrentValue(null);
   }, [props.wasReset]);

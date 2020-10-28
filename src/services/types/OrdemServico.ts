@@ -1,4 +1,4 @@
-import { ItemOS, ItemOSFromAPI } from "./ItemOS";
+import { ItemOS } from "./ItemOS";
 import { Usuario } from "./Usuario";
 
 export interface OrdemServico extends IOrdemServico {

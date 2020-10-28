@@ -11,7 +11,7 @@ const RenderDropdown = (props: {
       <a
         className="nav-link black-text-color dropdown-toggle"
         data-toggle="dropdown"
-        href="#"
+        href="/#"
         role="button"
         aria-haspopup="true"
         aria-expanded="false"

@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { AuthContext } from "store/contexts/AuthContext";
+import React from "react";
 import Navbar from "../index";
 import "NewNavbar.css";
 import RenderItem from "../RenderItem";

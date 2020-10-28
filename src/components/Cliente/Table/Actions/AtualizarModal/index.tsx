@@ -1,6 +1,5 @@
 import CustomPopup from "components/global/CustomPopup";
 import React from "react";
-import { Icon, Modal } from "semantic-ui-react";
 import { Cliente } from "services/types/Cliente";
 import ClienteForm from "../../../Form";
 

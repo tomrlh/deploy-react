@@ -1,31 +1,11 @@
-import React, { Component, useContext, useState } from "react";
-import {
-  Button,
-  Container,
-  Dropdown,
-  Grid,
-  Icon,
-  Image,
-  Menu,
-} from "semantic-ui-react";
-import { Link, useNavigate } from "react-router-dom";
-import { ContratoNav } from "routes/navigation/contrato";
-import { ClienteNav } from "routes/navigation/cliente";
-import { OrdemServicoNav } from "routes/navigation/ordemservico";
-import { AuthContext } from "store/contexts/AuthContext";
+import React from "react";
+import { Image } from "semantic-ui-react";
 import RenderRightSide from "./RenderRightSide";
-import { Footer } from "../Footer";
 
 const FixedMenuLayout = (props: { options: any }) => {
-  const { loggedUser } = useContext(AuthContext);
-  const navigate = useNavigate();
-  const [dropdownMenuStyle, setDropdownMenuStyle] = useState({
-    display: "none",
-  });
-
   return (
     <nav className="navbar navbar-expand-lg bg-success" style={classes.bar}>
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/#">
         <Image size="mini" src="/images/logo.png" style={classes.logo} />
       </a>
 

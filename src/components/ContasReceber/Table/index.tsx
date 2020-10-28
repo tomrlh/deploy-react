@@ -1,9 +1,5 @@
 import React from "react";
-import { Image, Message, Segment, Table } from "semantic-ui-react";
-import { Cliente } from "services/types/Cliente";
-import { Meta } from "services/types/Adonis/Meta";
 import PageHeader from "components/global/Commons/PageHeader";
-import { ClienteFieldsNames } from "services/types/Cliente";
 
 type Props = {};
 
@@ -48,16 +44,3 @@ const ContasReceberTable = () => {
 };
 
 export default ContasReceberTable;
-
-const styles = {
-  logo: {
-    borderRadius: "5px",
-    marginRight: "5px",
-    width: "30",
-    height: "30",
-  },
-  logoText: {
-    display: "table-cell",
-    verticalAlign: "middle",
-  },
-};

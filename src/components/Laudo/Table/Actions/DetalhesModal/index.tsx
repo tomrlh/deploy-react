@@ -1,9 +1,6 @@
 import React from "react";
-import { Button, Icon, Modal } from "semantic-ui-react";
-import { Cliente } from "services/types/Cliente";
-import GestoresClienteTable from "components/Contrato/Table/DetalhesModal/GestoresClienteTable";
 import CustomPopup from "components/global/CustomPopup";
-import { Laudo, LaudoFieldsAPI, LaudoFieldsNames } from "services/types/Laudo";
+import { Laudo, LaudoFieldsNames } from "services/types/Laudo";
 
 const DetalhesModal = (props: { laudo: Laudo }) => {
   const modalId = "laudoDetalhesModal";

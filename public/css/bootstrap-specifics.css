@@ -1,0 +1,37 @@
+.flex-form-group {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.flex-field {
+  width: 100%;
+  margin-right: 5px;
+}
+
+.rounded {
+  vertical-align: middle !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+}
+
+.rounded-no-radius {
+  vertical-align: middle !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.btn-right-margin {
+  margin-right: 2px;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.fix-close-button-margin {
+  min-height: 10px;
+  margin-top: 4px !important;
+}

@@ -1,0 +1,67 @@
+.gradient-yellow {
+  background-image: linear-gradient(to right, #fdbe25, #ffea37) !important;
+}
+
+.gradient-orange {
+  background-image: linear-gradient(to right, #fab823, #ee5f13) !important;
+}
+
+.gradient-orange-red {
+  background-image: linear-gradient(to right, #eb4f12, #d92d21) !important;
+}
+
+/* .gradient-red {
+  background-image: linear-gradient(to right, #ed433f, #b71b1f) !important;
+} */
+
+.gradient-red {
+  background-image: linear-gradient(to right, #e66462, #b32e33) !important;
+}
+
+.gradient-wine {
+  background-image: linear-gradient(to right, #b71c24, #db3a86) !important;
+}
+
+.gradient-pink {
+  background-image: linear-gradient(to right, #d83f91, #ae4bb8) !important;
+}
+
+.gradient-purple {
+  background-image: linear-gradient(to right, #a94bb9, #6d3ab0) !important;
+}
+
+.gradient-blue {
+  background-image: linear-gradient(to right, #5540cd, #1e3bb3) !important;
+}
+
+.gradient-dark-blue {
+  background-image: linear-gradient(to right, #1c3eb4, #1b73d5) !important;
+}
+
+.gradient-bright-blue {
+  background-image: linear-gradient(to right, #5fa2ff, #086ae9) !important;
+}
+
+.gradient-green {
+  background: linear-gradient(to right, #12ac52, #38ef7d) !important;
+}
+
+.gradient-bright-green {
+  background: linear-gradient(to right, #aaffa9, #11ffbd) !important;
+}
+
+.gradient-dark-green {
+  background: linear-gradient(to right, #348f50, #56b4d3) !important;
+}
+
+.gradient-gray {
+  background: linear-gradient(to right, #403b4a, #bbbbb4) !important;
+}
+
+/* usar esta classe como base para implementar .gradient-yellow-border por ex, e mudar as cores
+    no linear-gradient*/
+.gradient-border {
+  border: 1px solid transparent !important;
+  border-image: linear-gradient(to right, #403b4a, #bbbbb4) !important;
+  border-image-slice: 1 !important;
+}
